@@ -88,7 +88,7 @@ const Navbar = () => {
 				<div className="hidden md:flex gap-3">
 					{menuItems.map((link) => (
 						<a
-							className="p-2 hover:bg-gray-100 dark:hover:bg-white dark:hover:bg-opacity-25 rounded-lg"
+							className="p-2 hover:bg-gray-100 dark:hover:bg-white dark:hover:bg-opacity-25 rounded-lg transition-colors duration-[350ms]"
 							href={link.link}
 							key={link.title}
 						>

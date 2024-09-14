@@ -4,7 +4,6 @@ import {
 	faGraduationCap,
 	faCalendarDays,
 	faLocationDot,
-	faChevronRight,
 	faChevronUp,
 	faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
@@ -67,45 +66,47 @@ const EducationCard: React.FC<EducationCardProps> = ({ school }) => {
 				</div>
 			</button>
 
-			{isOpen && (
-				<div className="text-left font-light mt-5 text-sm text-gray-500 dark:text-white">
-					<div>
-						<span>Awards:</span>
-						<ul className="flex items-center gap-2">
-							{school.awards.map((award) => (
-								<li key={award} className="font-medium">
-									{award}
+			<div
+				className={`${
+					isOpen ? "max-h-[1100px] opacity-100" : "max-h-0 opacity-0 p-0 m-0"
+				} overflow-hidden text-left font-light mt-5 text-sm text-gray-500 dark:text-white transition-[opacity,height,max-height] duration-[300ms] ease-in-out`}
+			>
+				<div>
+					<span>Awards:</span>
+					<ul className="flex items-center gap-2">
+						{school.awards.map((award) => (
+							<li key={award} className="font-medium">
+								{award}
+							</li>
+						))}
+					</ul>
+				</div>
+
+				{school.courses.length > 0 ? (
+					<div className="mt-2">
+						<span>Relevant Courses:</span>
+						<ul className="flex flex-col items-start gap-4">
+							{school.courses.map((course) => (
+								<li key={course.title}>
+									<span className="font-medium">{course.title}</span>
+									<ul className="flex items-center gap-2 flex-wrap">
+										{course.tech.map((item) => (
+											<li
+												key={item}
+												className="mt-1 px-4 py-[0.3rem] bg-gray-100 dark:bg-gray-100/15 border border-black dark:border-white/25 rounded-full"
+											>
+												{item}
+											</li>
+										))}
+									</ul>
 								</li>
 							))}
 						</ul>
 					</div>
-
-					{school.courses.length > 0 ? (
-						<div className="mt-2">
-							<span>Relevant Courses:</span>
-							<ul className="flex flex-col items-start gap-4">
-								{school.courses.map((course) => (
-									<li key={course.title}>
-										<span className="font-medium">{course.title}</span>
-										<ul className="flex items-center gap-2 flex-wrap">
-											{course.tech.map((item) => (
-												<li
-													key={item}
-													className="mt-1 px-4 py-[0.3rem] bg-gradient-to-l from-sky-200/25 to-sky-200/75 border border-sky-300 rounded-full"
-												>
-													{item}
-												</li>
-											))}
-										</ul>
-									</li>
-								))}
-							</ul>
-						</div>
-					) : (
-						""
-					)}
-				</div>
-			)}
+				) : (
+					""
+				)}
+			</div>
 		</div>
 	);
 };

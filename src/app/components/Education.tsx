@@ -23,7 +23,7 @@ const Education = () => {
 			degree: "Computer Science (B.S.)",
 			courses: [
 				{
-					title: "Concepts of Computer Science ()",
+					title: "Concepts of Computer Science (COP 2500C)",
 					tech: ["Python"],
 				},
 				{
@@ -43,7 +43,7 @@ const Education = () => {
 					tech: ["Java"],
 				},
 				{
-					title: "Processes of Object-Oriented Development ()",
+					title: "Processes of Object-Oriented Development (COP 4331C)",
 					tech: [
 						"HTML",
 						"CSS",
@@ -56,19 +56,19 @@ const Education = () => {
 					],
 				},
 				{
-					title: "Systems Software ()",
+					title: "Systems Software (COP 3402)",
 					tech: ["C"],
 				},
 				{
-					title: "Programming Languages ()",
+					title: "Programming Languages (COP 4020)",
 					tech: ["Haskell", "TypeScript", "JavaScript", "C++", "C#"],
 				},
 				{
-					title: "Database System ()",
+					title: "Database System (COP 4710)",
 					tech: ["React", "Express", "Node.js", "JavaScript", "CSS", "MySQL"],
 				},
 				{
-					title: "Web-Based Information Technology ()",
+					title: "Web-Based Information Technology (CIS 4004)",
 					tech: ["HTML", "CSS", "Bootstrap", "PHP", "JQuery", "React"],
 				},
 			],

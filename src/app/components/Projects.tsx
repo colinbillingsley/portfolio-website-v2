@@ -131,7 +131,7 @@ const Projects = () => {
 								{project.tech.map((item) => (
 									<li
 										key={item}
-										className="text-xs sm:text-sm bg-gray-100 dark:bg-opacity-15 px-4 py-2 rounded-full border border-black dark:border-white dark:border-opacity-25"
+										className="text-xs sm:text-sm bg-gray-100 dark:bg-gray-100/15 px-4 py-2 rounded-full border border-black dark:border-white/25"
 									>
 										{item}
 									</li>

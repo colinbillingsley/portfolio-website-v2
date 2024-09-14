@@ -16,7 +16,7 @@ const config: Config = {
 					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 			},
 			transitionProperty: {
-				height: "height",
+				height: "height, max-height",
 				spacing: "margin, padding",
 			},
 			boxShadow: {
