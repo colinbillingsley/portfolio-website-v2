@@ -155,7 +155,7 @@ const Navbar = () => {
 			<div
 				className={`${
 					isMenuOpen ? "opacity-100 h-screen p-4" : "opacity-100 h-0 p-0"
-				} bg-gray-50 dark:bg-gray-800 dark:bg-opacity-25 bg-opacity-50 backdrop-blur-md overflow-hidden top-[72px] text-black dark:text-white flex flex-col gap-8 transition-[opacity,height,padding] duration-500 ease-in-out absolute left-0 w-full md:hidden md:z-auto z-[-1]`}
+				} bg-gray-50 dark:bg-neutral-900 overflow-hidden top-[72px] text-black dark:text-white flex flex-col gap-8 transition-[opacity,height,padding] duration-500 ease-in-out absolute left-0 w-full md:hidden md:z-auto z-[-1]`}
 			>
 				<div className="flex flex-col gap-1">
 					{menuItems.map((link) => (
