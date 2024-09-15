@@ -26,7 +26,7 @@ const About = () => {
 			>
 				<div className="flex flex-col justify-center items-center gap-5 w-full">
 					<p className="max-w-prose text-sm md:text-base">
-						Hey, I'm Colin. I am currently a senior at{" "}
+						Hey, I&apos;m Colin. I am currently a senior at{" "}
 						<span className="font-semibold">University of Central Florida</span>{" "}
 						getting my BAS in
 						<span className="font-semibold"> Computer Science</span>. I graduate
@@ -34,7 +34,7 @@ const About = () => {
 						<span className="font-semibold"> December 2024</span>.
 					</p>
 					<p className="max-w-prose text-sm md:text-base">
-						I'm a passionate{" "}
+						I&apos;m a passionate{" "}
 						<span className="font-semibold"> Front-end Developer</span> with a
 						love for creating minimalistic designs and engaging user
 						experiences. I thrive on transforming complex problems into clean,
