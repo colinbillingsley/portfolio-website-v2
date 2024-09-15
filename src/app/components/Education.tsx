@@ -1,5 +1,6 @@
 import React from "react";
 import EducationCard from "./EducationCard";
+import * as motion from "framer-motion/client";
 
 export interface educationProps {
 	acro: string;
@@ -94,15 +95,36 @@ const Education = () => {
 			id="education"
 			className="flex flex-col justify-center items-start w-full py-8 md:py-20"
 		>
-			<h2 className="text-lg font-semibold w-[100px] text-left mb-6">
+			<motion.h2
+				className="text-lg font-semibold w-[100px] text-left mb-6"
+				initial={{ opacity: 0, y: -50 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{
+					duration: 0.8,
+					ease: "easeOut",
+				}}
+				viewport={{ once: true }}
+			>
 				Education
-			</h2>
+			</motion.h2>
 
-			<div className="flex flex-col gap-5 w-full">
-				{education.map((school) => (
-					<EducationCard school={school} key={school.acro} />
+			<motion.div className="flex flex-col gap-5 w-full">
+				{education.map((school, index) => (
+					<motion.div
+						key={index}
+						initial={{ opacity: 0, y: -100 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{
+							duration: 0.8,
+							ease: "easeOut",
+							delay: index * 0.2,
+						}}
+						viewport={{ once: true }}
+					>
+						<EducationCard school={school} key={school.acro} />
+					</motion.div>
 				))}
-			</div>
+			</motion.div>
 		</section>
 	);
 };

@@ -23,7 +23,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ school }) => {
 	};
 
 	return (
-		<div className="gap-4 border border-gray-200 dark:border-white dark:border-opacity-25 rounded-lg shadow-md dark:shadow-edu p-4 w-full">
+		<div className="gap-4 border border-gray-200 dark:border-white/25 bg-white dark:bg-neutral-900 rounded-lg shadow-md dark:shadow-none p-4 w-full">
 			<button
 				onClick={handleCardClick}
 				className="group flex items-start gap-5 w-full hover:cursor-pointer"
@@ -59,9 +59,9 @@ const EducationCard: React.FC<EducationCardProps> = ({ school }) => {
 
 				<div className="ml-auto self-center">
 					{isOpen ? (
-						<FontAwesomeIcon icon={faChevronDown} />
-					) : (
 						<FontAwesomeIcon icon={faChevronUp} />
+					) : (
+						<FontAwesomeIcon icon={faChevronDown} />
 					)}
 				</div>
 			</button>
@@ -69,7 +69,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ school }) => {
 			<div
 				className={`${
 					isOpen ? "max-h-[1100px] opacity-100" : "max-h-0 opacity-0 p-0 m-0"
-				} overflow-hidden text-left font-light mt-5 text-sm text-gray-500 dark:text-white transition-[opacity,height,max-height] duration-[300ms] ease-in-out`}
+				} overflow-hidden text-left font-light mt-5 text-sm text-black dark:text-white transition-[opacity,height,max-height] duration-[300ms] ease-in-out hover:cursor-default`}
 			>
 				<div>
 					<span>Awards:</span>
@@ -93,7 +93,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ school }) => {
 										{course.tech.map((item) => (
 											<li
 												key={item}
-												className="mt-1 px-4 py-[0.3rem] bg-gray-100 dark:bg-gray-100/15 border border-black dark:border-white/25 rounded-full"
+												className="mt-1 px-4 py-[0.3rem] bg-gray-100 dark:bg-gray-100/15 border border-black/50 hover:border-black dark:border-white/25 dark:hover:border-white/50 rounded-full"
 											>
 												{item}
 											</li>

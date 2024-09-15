@@ -54,7 +54,7 @@ const Contact = () => {
 					<a
 						href="/colin-billingsley_resume.pdf"
 						target="_blank"
-						className="px-6 py-2 rounded-lg bg-white dark:bg-black hover:bg-gray-100 dark:hover:bg-white/25 border border-black dark:border-white/25 shadow-none hover:shadow-md dark:hover:shadow-white/25 ease-in-out duration-[250ms]"
+						className="px-6 py-2 rounded-lg bg-white dark:bg-black hover:bg-gray-100 dark:hover:bg-white/10 border border-black dark:border-white/25 shadow-none hover:shadow-md dark:hover:shadow-white/25 ease-in-out duration-[250ms]"
 					>
 						Resume
 					</a>

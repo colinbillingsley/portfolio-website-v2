@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import React from "react";
+import * as motion from "framer-motion/client";
 
 interface projectsProps {
 	title: string;
@@ -67,15 +68,32 @@ const Projects = () => {
 			id="projects"
 			className="flex flex-col justify-start items-start w-full py-8 md:py-20 hover:cursor-default"
 		>
-			<h2 className="text-lg font-semibold w-[100px] text-left mb-6">
+			<motion.h2
+				className="text-lg font-semibold w-[100px] text-left mb-6"
+				initial={{ opacity: 0, x: -100 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				transition={{
+					duration: 0.8,
+					ease: "easeOut",
+				}}
+				viewport={{ once: true }}
+			>
 				Projects
-			</h2>
+			</motion.h2>
 
 			<div className="flex flex-col items-start font-light gap-5 w-full h-full">
-				{projects.map((project) => (
-					<div
+				{projects.map((project, index) => (
+					<motion.div
 						key={project.title}
-						className="bg-white dark:bg-transparent border-2 border-gray-100 dark:border-white/15 dark:hover:border-white/50 flex flex-col lg:flex-row lg:even:flex-row-reverse justify-start items-center lg:items-start gap-6 p-8 shadow-lg dark:shadow-edu rounded-md w-full hover:-translate-y-1 transition-all duration-[350ms]"
+						className="bg-white dark:bg-neutral-900 border-2 border-gray-100 dark:border-white/15 dark:hover:border-white/50 flex flex-col lg:flex-row lg:even:flex-row-reverse justify-start items-center lg:items-start gap-6 p-8 shadow-lg dark:shadow-edu rounded-md w-full"
+						initial={{ opacity: 0, x: -100 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						whileHover={{ y: -4 }}
+						transition={{
+							duration: 0.5,
+							ease: "easeOut",
+						}}
+						viewport={{ once: true }}
 					>
 						<Image
 							src={project.imgURL}
@@ -124,21 +142,39 @@ const Projects = () => {
 									)}
 								</div>
 							</div>
-							<p className="max-w-prose text-sm md:text-base">
+							<motion.p
+								className="max-w-prose text-sm md:text-base"
+								initial={{ opacity: 0, y: 100 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{
+									duration: 0.5,
+									ease: "easeOut",
+									delay: 0.5,
+								}}
+								viewport={{ once: true }}
+							>
 								{project.description}
-							</p>
+							</motion.p>
 							<ul className="flex items-center gap-2 flex-wrap">
-								{project.tech.map((item) => (
-									<li
+								{project.tech.map((item, index) => (
+									<motion.li
 										key={item}
-										className="text-xs sm:text-sm bg-gray-100 dark:bg-gray-100/15 px-4 py-2 rounded-full border border-black dark:border-white/25"
+										className="text-xs sm:text-sm bg-gray-100 dark:bg-gray-100/15 px-4 py-2 rounded-full border border-black/50 hover:border-black dark:border-white/25 dark:hover:border-white/50"
+										initial={{ opacity: 0, y: 100 }}
+										whileInView={{ opacity: 1, y: 0 }}
+										transition={{
+											duration: 0.5,
+											ease: "easeOut",
+											delay: index * 0.1,
+										}}
+										viewport={{ once: true }}
 									>
 										{item}
-									</li>
+									</motion.li>
 								))}
 							</ul>
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</section>
