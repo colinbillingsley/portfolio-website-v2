@@ -31,6 +31,14 @@ const Projects = () => {
 				"https://drive.google.com/file/d/1iCfHR5V6v1a-yRV1ihCVlG_nqjbJ2vSg/view?usp=sharing",
 		},
 		{
+			title: "Contact Manager",
+			description: `This contact manager is a small project I created on my own. This is a frontend only project. I utilized React and NextJS to create a contact manager that allows you to add, edit, and delete contacts. There is also a task section where you can create and monitor tasks that you need done. My task section is inspired by Jira.`,
+			tech: ["React", "NextJS", "TypeScript", "Tailwind CSS"],
+			githubLink: "https://github.com/colinbillingsley/contact-manager",
+			imgURL: "/contact-manager.png",
+			link: "https://contact-manager-rose.vercel.app/",
+		},
+		{
 			title: "Pokemon Manager",
 			description: `Pokemon Manager was the first project for my Jr. Design Course. It is a contact manager inspired by, you guessed it, Pokemon. It is a full LAMP stack application that allows users to create a profile, login, update their profile information or contacts information, add contacts, search contacts, and delete contacts. I worked on the fronted of the project where i utilized HTML, CSS, and JavaScript.`,
 			tech: ["HTML", "CSS", "PHP", "JavaScript", "MySQL", "Postman"],
