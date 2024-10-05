@@ -22,6 +22,10 @@ const config: Config = {
 			boxShadow: {
 				edu: "0 0 20px 0 rgba(245, 245, 245, 0.2)",
 			},
+			screens: {
+				"card-sm": "700px",
+				"card-xl": "1170px", // Custom breakpoint
+			},
 		},
 		plugins: [require("daisyui")],
 	},

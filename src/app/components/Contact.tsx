@@ -2,6 +2,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import * as motion from "framer-motion/client";
 
 interface contactLinkProp {
 	icon: JSX.Element;
@@ -50,15 +51,21 @@ const Contact = () => {
 					))}
 				</div>
 
-				<button>
+				<motion.button
+					whileHover={{ scale: 1.04 }}
+					transition={{
+						duration: 0.2,
+						ease: "easeOut",
+					}}
+				>
 					<a
 						href="/colin-billingsley_resume.pdf"
 						target="_blank"
-						className="px-6 py-2 rounded-lg bg-white dark:bg-black hover:bg-gray-100 dark:hover:bg-white/10 border border-black dark:border-white/25 shadow-none hover:shadow-md dark:hover:shadow-white/25 ease-in-out duration-[250ms]"
+						className="px-6 py-2 rounded-sm bg-zinc-100 dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-900 border-2 border-zinc-500/10 hover:border-zinc-500 dark:border-white/25 dark:hover:border-white/50 shadow-none hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-white/15 transition-shadow duration-200"
 					>
 						Resume
 					</a>
-				</button>
+				</motion.button>
 			</div>
 		</div>
 	);
