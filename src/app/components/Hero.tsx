@@ -46,17 +46,33 @@ const Hero = () => {
 					Specializing in crafting visually appealing interfaces and seamless
 					user experiences using modern web technologies.
 				</motion.p>
-				<motion.div
-					className="bg-white dark:bg-neutral-900 flex items-center gap-3 font-light text-sm border border-black dark:border-white hover:cursor-default rounded-full px-4 py-2 w-fit"
-					initial="hidden"
-					whileInView="visible"
-					variants={variants}
-					transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-					viewport={{ once: true }}
-				>
-					<FontAwesomeIcon icon={faLocationDot} />
-					<p>Orlando, FL</p>
-				</motion.div>
+				<div className="flex items-center gap-3">
+					<motion.div
+						className="bg-white dark:bg-neutral-900 flex items-center gap-3 font-light text-sm border border-black dark:border-white hover:cursor-default rounded-full px-4 py-2 w-fit"
+						initial="hidden"
+						whileInView="visible"
+						variants={variants}
+						transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+						viewport={{ once: true }}
+					>
+						<FontAwesomeIcon icon={faLocationDot} />
+						<p>Orlando, FL</p>
+					</motion.div>
+					<motion.div
+						className="flex items-center gap-6 bg-gray-100 dark:bg-neutral-700 px-4 py-2 rounded-full hover:cursor-default"
+						initial="hidden"
+						whileInView="visible"
+						variants={variants}
+						transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+						viewport={{ once: true }}
+					>
+						<p className="font-light dark:opacity-75">Available for Hire</p>
+						<div className="relative">
+							<div className="absolute bg-green-500 h-3 w-3 rounded-full top-[-0.35rem] right-0 animate-ping"></div>
+							<div className="absolute bg-green-500 h-3 w-3 rounded-full top-[-0.35rem] right-0"></div>
+						</div>
+					</motion.div>
+				</div>
 			</div>
 		</section>
 	);
