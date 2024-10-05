@@ -23,7 +23,13 @@ const EducationCard: React.FC<EducationCardProps> = ({ school }) => {
 	};
 
 	return (
-		<div className="gap-4 border border-gray-200 dark:border-white/25 bg-white dark:bg-neutral-900 rounded-lg shadow-md dark:shadow-none p-4 w-full">
+		<div
+			className={`gap-4 border-2 ${
+				isOpen
+					? "border-zinc-500 dark:border-white/50"
+					: "border-zinc-500/10 dark:border-white/15"
+			} bg-zinc-100 dark:bg-neutral-900 rounded-sm shadow-md dark:shadow-none p-4 w-full`}
+		>
 			<button
 				onClick={handleCardClick}
 				className="group flex items-start gap-5 w-full hover:cursor-pointer"
@@ -93,7 +99,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ school }) => {
 										{course.tech.map((item) => (
 											<li
 												key={item}
-												className="mt-1 px-4 py-[0.3rem] bg-gray-100 dark:bg-gray-100/15 border border-black/50 hover:border-black dark:border-white/25 dark:hover:border-white/50 rounded-full"
+												className="mt-1 px-3 py-1 bg-gray-100 dark:bg-gray-100/15 border border-black/50 hover:border-black dark:border-white/25 dark:hover:border-white/50 rounded-md"
 											>
 												{item}
 											</li>

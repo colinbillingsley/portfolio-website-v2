@@ -47,7 +47,7 @@ const Hero = () => {
 					user experiences using modern web technologies.
 				</motion.p>
 				<motion.div
-					className="flex items-center gap-3 font-light text-sm border border-black dark:border-white hover:cursor-default rounded-full px-4 py-2 w-fit"
+					className="bg-white dark:bg-neutral-900 flex items-center gap-3 font-light text-sm border border-black dark:border-white hover:cursor-default rounded-full px-4 py-2 w-fit"
 					initial="hidden"
 					whileInView="visible"
 					variants={variants}
