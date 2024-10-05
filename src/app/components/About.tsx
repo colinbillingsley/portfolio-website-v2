@@ -28,7 +28,7 @@ const About = () => {
 					<p className="max-w-prose text-sm md:text-base">
 						Hey, I&apos;m Colin. I am currently a senior at{" "}
 						<span className="font-semibold">University of Central Florida</span>{" "}
-						getting my BAS in
+						getting my BS in
 						<span className="font-semibold"> Computer Science</span>. I graduate
 						at the end of this year,{" "}
 						<span className="font-semibold"> December 2024</span>.
