@@ -10,6 +10,7 @@ import {
 	faSun,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useModeContext } from "../context/ModeContext";
 
 interface linkProp {
 	icon: JSX.Element;
@@ -24,17 +25,15 @@ interface profileLinkProp {
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const [isLight, setIsLight] = useState(true);
+	const { isDark, changeMode } = useModeContext();
 
 	useEffect(() => {
-		if (isLight) {
+		if (!isDark) {
 			document.documentElement.classList.remove("dark");
 		} else {
 			document.documentElement.classList.add("dark");
 		}
-	}, [isLight]);
-
-	const toggleDarkMode = (): void => setIsLight((prev) => !prev);
+	}, [isDark]);
 
 	const menuItems: linkProp[] = [
 		{
@@ -74,7 +73,7 @@ const Navbar = () => {
 		<nav className="fixed z-[50] top-0 left-0 right-0 font-light bg-white dark:bg-black px-6 md:px-16 py-4 border-b border-gray-200 dark:border-white dark:border-opacity-20">
 			<div className="w-full mx-auto flex justify-between items-center">
 				<a href="#" className="font-bold text-xl">
-					{isLight ? (
+					{!isDark ? (
 						<p>Colin.light</p>
 					) : (
 						<p className="relative">
@@ -99,12 +98,12 @@ const Navbar = () => {
 
 				<div className="flex gap-3">
 					<div className="self-center">
-						{isLight ? (
-							<button onClick={toggleDarkMode} className="p-2">
+						{!isDark ? (
+							<button onClick={changeMode} className="p-2">
 								<FontAwesomeIcon icon={faSun} />
 							</button>
 						) : (
-							<button onClick={toggleDarkMode} className="p-2">
+							<button onClick={changeMode} className="p-2">
 								<FontAwesomeIcon icon={faMoon} />
 							</button>
 						)}

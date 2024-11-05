@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { NextUIProvider } from "@nextui-org/react";
+import { ModeContextProvider } from "./context/ModeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,14 +18,16 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={`${inter.className} bg-white dark:bg-black text-black dark:text-white transition-colors`}>
-				<NextUIProvider>
+		<ModeContextProvider>
+			<html lang="en">
+				<body
+					className={`${inter.className} bg-white dark:bg-black text-black dark:text-white transition-colors`}
+				>
 					<Navbar />
 					{children}
 					<Footer />
-				</NextUIProvider>
-			</body>
-		</html>
+				</body>
+			</html>
+		</ModeContextProvider>
 	);
 }
