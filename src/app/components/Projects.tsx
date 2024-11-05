@@ -46,7 +46,7 @@ const Projects = () => {
 		},
 		{
 			title: "Contact Manager",
-			description: `A contact manager that eases handling of contacts, as well as setting up tasks that need to be done. No backend is incorporated within the project.`,
+			description: `A project that I worked on by myself. This contact manager that eases handling of contacts, as well as setting up tasks that need to be done. No backend is incorporated within the project.`,
 			tech: ["React", "NextJS", "TypeScript", "Tailwind CSS"],
 			githubLink: "https://github.com/colinbillingsley/contact-manager",
 			imgURL: "/contact-manager.png",

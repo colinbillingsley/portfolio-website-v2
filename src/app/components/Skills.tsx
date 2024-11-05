@@ -1,99 +1,148 @@
-import {
-	faCode,
-	faDatabase,
-	faKeyboard,
-	faTerminal,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+"use client";
 import * as motion from "framer-motion/client";
-import React from "react";
+import React, { ReactNode } from "react";
+import {
+	DiJsBadge,
+	DiReact,
+	DiCss3,
+	DiHtml5,
+	DiPython,
+	DiNodejsSmall,
+	DiJava,
+	DiMysql,
+} from "react-icons/di";
+import { SiTypescript, SiExpress, SiPostman, SiFigma } from "react-icons/si";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoMongodb, BiLogoPostgresql } from "react-icons/bi";
+import { FaGitAlt, FaGithub, FaLaptopCode } from "react-icons/fa";
+import { useModeContext } from "../context/ModeContext";
 
-interface languagesProps {
-	name: string;
-}
+const ICONSIZE = 48;
 
-interface webDevProps {
+interface techProps {
 	name: string;
-}
-
-interface databaseProps {
-	name: string;
-}
-
-interface miscProps {
-	name: string;
+	type: string;
+	icon: ReactNode;
+	color: string;
 }
 
 const Skills = () => {
-	const languages: languagesProps[] = [
-		{
-			name: "Python",
-		},
-		{
-			name: "C",
-		},
-		{
-			name: "Java",
-		},
-	];
+	const { isDark } = useModeContext();
 
-	const webDev: webDevProps[] = [
+	const skills: techProps[] = [
 		{
-			name: "HTML",
-		},
-		{
-			name: "CSS",
-		},
-		{
-			name: "Tailwind CSS",
+			name: "TypeScript",
+			type: "Language",
+			color: "#3178C6",
+			icon: <SiTypescript color="#3178C6" size={ICONSIZE} />,
 		},
 		{
 			name: "JavaScript",
-		},
-		{
-			name: "TypeScript",
+			type: "Language",
+			color: "#F0DB4F",
+			icon: <DiJsBadge color="#F0DB4F" size={ICONSIZE} />,
 		},
 		{
 			name: "React",
+			type: "Javascript Library",
+			color: "#61DBFB",
+			icon: <DiReact color="#61DBFB" size={ICONSIZE} />,
 		},
 		{
 			name: "NextJS",
+			type: "JavaScript Framework",
+			color: "#000000",
+			icon: <RiNextjsFill color={`#000000 dark:#FFFFFF`} size={ICONSIZE} />,
+		},
+		{
+			name: "Tailwind CSS",
+			type: "CSS Framework",
+			color: "#38BDF8",
+			icon: <RiTailwindCssFill color="#38BDF8" size={ICONSIZE} />,
+		},
+		{
+			name: "HTML",
+			type: "Markup Language",
+			color: "#E34C26",
+			icon: <DiHtml5 color="#E34C26" size={ICONSIZE} />,
+		},
+		{
+			name: "CSS",
+			type: "Style Sheet Language",
+			color: "#264de4",
+			icon: <DiCss3 color="#264de4" size={ICONSIZE} />,
 		},
 		{
 			name: "Express",
+			type: "JavaScript Framework",
+			color: "#000000",
+			icon: <SiExpress color={`#000000 dark:#FFFFFF`} size={ICONSIZE} />,
 		},
 		{
 			name: "Node.js",
+			type: "JavaScript Library",
+			color: "#68A063",
+			icon: <DiNodejsSmall color="#68A063" size={ICONSIZE} />,
 		},
-	];
-
-	const databases: databaseProps[] = [
+		{
+			name: "Python",
+			type: "Language",
+			color: "#FFD43B",
+			icon: <DiPython color="#FFD43B" size={ICONSIZE} />,
+		},
+		{
+			name: "C",
+			type: "Language",
+			color: "#000000",
+			icon: <FaLaptopCode color={`#000000 dark:#FFFFFF`} size={ICONSIZE} />,
+		},
+		{
+			name: "Java",
+			type: "Language",
+			color: "#FFA518",
+			icon: <DiJava color="#FFA518" size={ICONSIZE} />,
+		},
 		{
 			name: "MySQL",
+			type: "Database",
+			color: "#00758F",
+			icon: <DiMysql color="#00758F" size={ICONSIZE} />,
 		},
 		{
 			name: "PostgreSQL",
+			type: "Database",
+			color: "#0064A5",
+			icon: <BiLogoPostgresql color="#0064A5" size={ICONSIZE} />,
 		},
 		{
 			name: "MongoDB",
+			type: "Database",
+			color: "#4DB33D",
+			icon: <BiLogoMongodb color="#4DB33D" size={ICONSIZE} />,
 		},
-	];
-
-	const misc: miscProps[] = [
 		{
 			name: "Git",
+			type: "Version Control",
+			color: "#F1502F",
+			icon: <FaGitAlt color="#F1502F" size={ICONSIZE} />,
 		},
 		{
 			name: "GitHub",
+			type: "Miscellaneous",
+			color: "#000000",
+			icon: <FaGithub color={`#000000 dark:#FFFFFF`} size={ICONSIZE} />,
 		},
 		{
 			name: "Postman",
+			type: "Miscellaneous",
+			color: "#EF5B25",
+			icon: <SiPostman color="#EF5B25" size={ICONSIZE} />,
 		},
 		{
 			name: "Figma",
-		},
-		{
-			name: "Debugging",
+			type: "Miscellaneous",
+			color: "#A259FF",
+			icon: <SiFigma color="#A259FF" size={ICONSIZE} />,
 		},
 	];
 
@@ -112,130 +161,67 @@ const Skills = () => {
 				Skills
 			</motion.h2>
 
-			<div className="font-light grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 hover:cursor-default w-full">
-				<div className="p-2">
-					<motion.div
-						className="flex items-center gap-3 mb-2"
-						initial={{ opacity: 0, x: -50 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.8, ease: "easeOut" }}
-						viewport={{ once: true }}
-					>
-						<FontAwesomeIcon icon={faKeyboard} />
-						<h3 className="font-semibold uppercase">WebDev</h3>
-					</motion.div>
-					{webDev.map((item, index) => (
-						<motion.p
-							key={item.name}
-							className="text-gray-500 dark:text-white dark:opacity-50"
-							initial={{ opacity: 0, x: -50 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							transition={{
-								duration: 0.8,
-								ease: "easeOut",
-								delay: index * 0.2,
-							}}
-							viewport={{ once: true }}
-						>
-							{item.name}
-						</motion.p>
-					))}
-				</div>
-				<div className="p-2">
-					<motion.div
-						className="flex items-center gap-3 mb-2"
-						initial={{ opacity: 0, x: -50 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-						viewport={{ once: true }}
-					>
-						<FontAwesomeIcon icon={faCode} />
-						<h3 className="font-semibold uppercase">Languages</h3>
-					</motion.div>
-					{languages.map((item, index) => (
-						<motion.p
-							key={item.name}
-							className="text-gray-500 dark:text-white dark:opacity-50"
-							initial={{ opacity: 0, x: -50 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							transition={{
-								duration: 0.8,
-								ease: "easeOut",
-								delay: index * 0.2,
-							}}
-							viewport={{ once: true }}
-						>
-							{item.name}
-						</motion.p>
-					))}
-				</div>
-				<div className="p-2">
-					<motion.div
-						className="flex items-center gap-3 mb-2"
-						initial={{ opacity: 0, x: -50 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{
-							duration: 0.8,
-							ease: "easeOut",
-							delay: 0.4,
-						}}
-						viewport={{ once: true }}
-					>
-						<FontAwesomeIcon icon={faDatabase} />
-						<h3 className="font-semibold uppercase">Databases</h3>
-					</motion.div>
-					{databases.map((item, index) => (
-						<motion.p
-							key={item.name}
-							className="text-gray-500 dark:text-white dark:opacity-50"
-							initial={{ opacity: 0, x: -50 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							transition={{
-								duration: 0.8,
-								ease: "easeOut",
-								delay: index * 0.2,
-							}}
-							viewport={{ once: true }}
-						>
-							{item.name}
-						</motion.p>
-					))}
-				</div>
-				<div className="p-2">
-					<motion.div
-						className="flex items-center gap-3 mb-2"
-						initial={{ opacity: 0, x: -50 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{
-							duration: 0.8,
-							ease: "easeOut",
-							delay: 0.6,
-						}}
-						viewport={{ once: true }}
-					>
-						<FontAwesomeIcon icon={faTerminal} />
-						<h3 className="font-semibold uppercase">Miscellaneous</h3>
-					</motion.div>
-					{misc.map((item, index) => (
-						<motion.p
-							key={item.name}
-							className="text-gray-500 dark:text-white dark:opacity-50"
-							initial={{ opacity: 0, x: -50 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							transition={{
-								duration: 0.8,
-								ease: "easeOut",
-								delay: index * 0.2,
-							}}
-							viewport={{ once: true }}
-						>
-							{item.name}
-						</motion.p>
-					))}
-				</div>
-			</div>
+			<motion.div
+				className="w-full flex items-center justify-center md:justify-start flex-wrap gap-2 hover:cursor-default"
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.1 }}
+				viewport={{ once: true }}
+				variants={{
+					hidden: { opacity: 0 },
+					visible: { opacity: 1 },
+				}}
+			>
+				{skills.map((tech, index) => (
+					<SkillCard
+						name={tech.name}
+						icon={tech.icon}
+						type={tech.type}
+						color={tech.color}
+						isDark={isDark}
+						key={index}
+					/>
+				))}
+			</motion.div>
 		</section>
 	);
 };
 
 export default Skills;
+
+const SkillCard = ({
+	name,
+	icon,
+	type,
+	color,
+	isDark,
+}: {
+	name: string;
+	icon: ReactNode;
+	type: string;
+	color: string;
+	isDark: boolean;
+}) => {
+	return (
+		<motion.div
+			variants={{
+				hidden: { opacity: 0, y: -50 },
+				visible: { opacity: 1, y: 0 },
+			}}
+			transition={{ duration: 0.5, ease: "easeOut" }}
+			className="relative z-10 flex items-center gap-2 rounded-sm bg-zinc-100 dark:bg-neutral-900 p-4 min-w-60 min-h-32 overflow-hidden border-2 border-zinc-500/10 dark:border-white/15"
+		>
+			<div>{icon}</div>
+			<div className="flex flex-col">
+				<h2 className="font-medium text-lg">{name}</h2>
+				<span className="text-sm font-light">{type}</span>
+			</div>
+			<div
+				className="absolute top-0 left-0 w-14 h-14 rounded-full blur-3xl"
+				style={{
+					backgroundColor: isDark && color === "#000000" ? "#FFFFFF" : color,
+				}}
+			></div>
+		</motion.div>
+	);
+};
