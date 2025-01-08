@@ -59,7 +59,7 @@ const Contact = () => {
 					}}
 				>
 					<a
-						href="/colin-billingsley_resume.pdf"
+						href="/Billingsley_Resume.pdf"
 						target="_blank"
 						className="px-6 py-2 rounded-sm bg-zinc-100 dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-900 border-2 border-zinc-500/10 hover:border-zinc-500 dark:border-white/25 dark:hover:border-white/50 shadow-none hover:shadow-xl dark:hover:shadow-xl dark:hover:shadow-white/15 transition-shadow duration-200"
 					>

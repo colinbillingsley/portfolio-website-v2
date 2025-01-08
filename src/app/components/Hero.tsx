@@ -56,7 +56,7 @@ const Hero = () => {
 						viewport={{ once: true }}
 					>
 						<FontAwesomeIcon icon={faLocationDot} />
-						<p>Orlando, FL</p>
+						<p>Nashville, TN</p>
 					</motion.div>
 					<motion.div
 						className="flex items-center gap-6 bg-gray-100 dark:bg-neutral-700 px-4 py-2 rounded-full hover:cursor-default"
