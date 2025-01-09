@@ -26,12 +26,10 @@ const About = () => {
 			>
 				<div className="flex flex-col justify-center items-center gap-5 w-full">
 					<p className="max-w-prose text-sm md:text-base">
-						Hey, I&apos;m Colin. I am currently a senior at{" "}
+						Hey, I&apos;m Colin. I am a recent graduate at the{" "}
 						<span className="font-semibold">University of Central Florida</span>{" "}
-						getting my BS in
-						<span className="font-semibold"> Computer Science</span>. I graduate
-						at the end of this year,{" "}
-						<span className="font-semibold"> December 2024</span>.
+						in which I received my Bachelors in
+						<span className="font-semibold"> Computer Science</span>.
 					</p>
 					<p className="max-w-prose text-sm md:text-base">
 						I&apos;m a passionate{" "}
