@@ -31,6 +31,23 @@ const Education = () => {
 			degree: "Computer Science (B.S.)",
 			courses: [
 				{
+					courseId: "COP 4934 & COP 4935",
+					title: "Senior Design I & II",
+					tech: [
+						"React",
+						"React Native",
+						"CSS",
+						"JavaScript",
+						"PostgreSQL",
+						"pgAdmin",
+						"AWS",
+						"Python",
+						"Agile Methodology",
+						"Jira",
+						"Confluence",
+					],
+				},
+				{
 					courseId: "COP 2500C",
 					title: "Concepts of Computer Science",
 					tech: ["Python"],
@@ -186,7 +203,7 @@ const ClassTechnologiesTable: React.FC<{ classes: classProps[] }> = ({
 								<span>Class Name</span>
 							</th>
 							<th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
-								Technologies
+								Technologies/Skills
 							</th>
 						</motion.tr>
 					</thead>

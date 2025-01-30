@@ -5,8 +5,7 @@ import {
 	faPlayCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import * as motion from "framer-motion/client";
 
 interface projectsProps {
@@ -34,6 +33,22 @@ const projectCardVariants = {
 
 const Projects = () => {
 	const projects: projectsProps[] = [
+		{
+			title: "TODO.io",
+			description: `A full stack to-do list application that allows users to create an account, login, create different lists with tasks in them, as well as editing and deleting tasks.`,
+			tech: [
+				"Next.js",
+				"TypeScript",
+				"PostgreSQL",
+				"Tailwind CSS",
+				"Supabase",
+				"Prisma",
+				"ShadCN",
+			],
+			githubLink: "https://github.com/colinbillingsley/TODO.io",
+			imgURL: "/todo-io.png",
+			link: "https://todo-io-olive.vercel.app/",
+		},
 		{
 			title: "Univents",
 			description: `An application that hosts a university's events across campus, as well as any groups for students to join. I worked on the entire frontend and some backend`,
