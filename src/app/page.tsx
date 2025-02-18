@@ -11,11 +11,11 @@ export default function Home() {
 			<hr className="bg-gray-100 dark:opacity-25 w-2/3 my-8" />
 			<About />
 			<hr className="bg-gray-100 dark:opacity-25 w-2/3 my-8" />
+			<Projects />
 			<Skills />
 			<hr className="bg-gray-100 dark:opacity-25 w-2/3 my-8" />
 			<Education />
 			<hr className="bg-gray-100 dark:opacity-25 w-2/3 my-8" />
-			<Projects />
 		</main>
 	);
 }

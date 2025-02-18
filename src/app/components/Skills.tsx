@@ -132,18 +132,6 @@ const Skills = () => {
 			color: "#000000",
 			icon: <FaGithub color={`#000000 dark:#FFFFFF`} size={ICONSIZE} />,
 		},
-		{
-			name: "Postman",
-			type: "Miscellaneous",
-			color: "#EF5B25",
-			icon: <SiPostman color="#EF5B25" size={ICONSIZE} />,
-		},
-		{
-			name: "Figma",
-			type: "Miscellaneous",
-			color: "#A259FF",
-			icon: <SiFigma color="#A259FF" size={ICONSIZE} />,
-		},
 	];
 
 	return (
