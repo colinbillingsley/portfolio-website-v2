@@ -12,10 +12,10 @@ export default function Home() {
 			<About />
 			<hr className="bg-gray-100 dark:opacity-25 w-2/3 my-8" />
 			<Projects />
+			<hr className="bg-gray-100 dark:opacity-25 w-2/3 my-8" />
 			<Skills />
 			<hr className="bg-gray-100 dark:opacity-25 w-2/3 my-8" />
 			<Education />
-			<hr className="bg-gray-100 dark:opacity-25 w-2/3 my-8" />
 		</main>
 	);
 }
