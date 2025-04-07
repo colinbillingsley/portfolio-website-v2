@@ -142,7 +142,7 @@ export default Projects;
 const ProjectCard: React.FC<{ project: projectsProps }> = ({ project }) => {
 	return (
 		<motion.div
-			className="w-full h-full bg-zinc-100 dark:bg-neutral-900 border-2 border-zinc-500/10 hover:border-zinc-500 dark:border-white/15 dark:hover:border-white/50 p-8 rounded-sm shadow-none hover:shadow-2xl dark:hover:shadow-white/15 transition-shadow duration-200"
+			className={`w-full h-full bg-zinc-100 dark:bg-neutral-900 border-2 border-zinc-500/10 hover:border-zinc-500 dark:border-white/15 dark:hover:border-white/50 p-8 rounded-sm shadow-none hover:shadow-2xl dark:hover:shadow-white/15 transition-shadow duration-200`}
 			whileHover={{ scale: 1.04 }}
 			transition={{
 				duration: 0.2,
