@@ -8,6 +8,7 @@ import {
 	faListUl,
 	faMoon,
 	faSun,
+	faBookBookmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useModeContext } from "../context/ModeContext";
@@ -42,6 +43,16 @@ const Navbar = () => {
 			link: "#about",
 		},
 		{
+			icon: <FontAwesomeIcon icon={faBookBookmark} />,
+			title: "Experience",
+			link: "#experience",
+		},
+		{
+			icon: <FontAwesomeIcon icon={faLaptopCode} />,
+			title: "Projects",
+			link: "#projects",
+		},
+		{
 			icon: <FontAwesomeIcon icon={faListUl} />,
 			title: "Skills",
 			link: "#skills",
@@ -50,11 +61,6 @@ const Navbar = () => {
 			icon: <FontAwesomeIcon icon={faGraduationCap} />,
 			title: "Education",
 			link: "#education",
-		},
-		{
-			icon: <FontAwesomeIcon icon={faLaptopCode} />,
-			title: "Projects",
-			link: "#projects",
 		},
 	];
 
