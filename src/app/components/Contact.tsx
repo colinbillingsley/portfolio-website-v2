@@ -24,7 +24,7 @@ const Contact = () => {
 		},
 		{
 			icon: <FontAwesomeIcon icon={faEnvelope} />,
-			title: "colinebillingsley@gmail.com",
+			title: "contact@colinbillingsley.com",
 		},
 	];
 	return (
