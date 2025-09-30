@@ -9,7 +9,31 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Colin Billingsley",
-	description: "My porfolio website",
+	description: "Colin Billingsley, a software developer, website portfolio.",
+	keywords: [
+		"colin",
+		"colin billingsley",
+		"billingsley",
+		"software developer",
+		"colin software developer",
+		"colin billingsley software developer",
+		"software",
+		"developer",
+		"frontend developer",
+		"colin frontend developer",
+		"colin billingsley frontend developer",
+		"frontend",
+		"software engineer",
+		"colin software engineer",
+		"colin billingsley software engineer",
+		"web developer",
+		"colin web developer",
+		"colin billingsley web developer",
+		"colin billingsley nashville tn",
+		"colin nashville tn",
+		"colin nashville",
+	],
+	icons: "/colin-bw-logo.png",
 };
 
 export default function RootLayout({
