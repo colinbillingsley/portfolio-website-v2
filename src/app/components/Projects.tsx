@@ -34,8 +34,17 @@ const projectCardVariants = {
 const Projects = () => {
 	const projects: projectsProps[] = [
 		{
+			title: "Burton Electric LLC Website",
+			description: `Created and designed a website on my own for a local electrician business. Utilized React, NextJS, Tailwind CSS, and Framer Motion
+for the front end, as well as VSCode and Git. I transitioned their website away from their previous company that hosted their website, so that they had more control of their design, a modern and clean UI/UX experience, and faster edits.`,
+			tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+			githubLink: "https://github.com/colinbillingsley/burton-electric-llc",
+			imgURL: "",
+			link: "https://burtonelectric.com/",
+		},
+		{
 			title: "TODO.io",
-			description: `A full stack to-do list application that allows users to create an account, login, create different lists with tasks in them, as well as editing and deleting tasks.`,
+			description: `Created and designed on my own a todo web app for my own practice with a full stack application. Utilized React, NextJS, Tailwind CSS, and ShadCN for the frontend. In the backend, I utilized the NextJS API Routes, Supabase (PostgreSQL), and Prisma. I was nearing the end of my college education and was planning on moving back home; therefore, I created a todo application so that I could keep track of everything I needed to do for school and my move back home.`,
 			tech: [
 				"Next.js",
 				"TypeScript",
@@ -47,7 +56,7 @@ const Projects = () => {
 			],
 			githubLink: "https://github.com/colinbillingsley/TODO.io",
 			imgURL: "/todo-io.png",
-			link: "https://todo-io-olive.vercel.app/",
+			link: "",
 		},
 		{
 			title: "Univents",
